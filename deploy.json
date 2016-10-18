@@ -1,0 +1,18 @@
+{
+  "id": "cahdockervalidationrepo",
+  "cpus": 0.1,
+  "mem": 2048,
+  "instances": 1,
+  "constraints": [
+    ["tier", "LIKE", "services"],
+    ["environment", "LIKE", "non-production"]],
+  "env": {},
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "registry.cahcommtech.com/cahtyrelljackson/cahdockervalidationrepo:latest",
+      "network": "BRIDGE",
+      "privileged": false
+    }
+  }
+}
