@@ -1,4 +1,5 @@
 #!/bin/bash -x
+echo FOR COMMAND
 for machine in ${CONTAINER}
 do
 MARATHON_HOST="run.cahcommtech.net:80"
@@ -16,6 +17,7 @@ if [ -f "${MACHINE_DESC}" ]; then
   echo CURL COMMAND
   curl -X PUT -H "Content-Type: application/json" "http://${MARATHON_HOST}/v2/apps/${MACHINE}" -d@"${MACHINE_DESC}"
 else
+  echo EXIT COMMAND
   exit -1
 fi
 
