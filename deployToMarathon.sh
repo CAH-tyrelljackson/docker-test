@@ -1,5 +1,5 @@
 #!/bin/bash -x
-for machine in cahtyrelljackson/cahdockervalidationrepo
+for machine in ${CONTAINER}
 do
 MARATHON_HOST="run.cahcommtech.net:80"
 MACHINE="dockervalidation"
